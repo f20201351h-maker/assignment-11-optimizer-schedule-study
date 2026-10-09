@@ -1,0 +1,102 @@
+{
+ "criterion": {
+  "definition": "first t* with |u_noBC - u_BC|/|u_BC| < tol for `window` consecutive steps",
+  "tol": 0.05,
+  "window": 10,
+  "fixed_before_results": true
+ },
+ "cases": [
+  {
+   "sequence": "course_pattern",
+   "beta2": 0.999,
+   "beta2_label": "0.999 (course / PyTorch default)",
+   "step1_ratio_noBC_over_BC": 3.1622757234151555,
+   "max_ratio_first20": 6.568519174037941,
+   "argmax_ratio_first20": 12,
+   "ratio_at_step20": 6.240927481792213,
+   "stopped_mattering_within_20_steps": false,
+   "t_star": 2375,
+   "t_star_sensitivity": {
+    "0.01": 3925,
+    "0.02": 3247,
+    "0.05": 2375,
+    "0.1": 1751
+   },
+   "t_star_window5": 2375,
+   "t_star_window20": 2375,
+   "max_rel_dev_from_analytic_ratio": 6.124551446552302e-07,
+   "weight_gap_at_20": -0.09905849415828782,
+   "weight_gap_at_t_star": -1.1536391667713355,
+   "weight_gap_at_10000": -1.201253088763396
+  },
+  {
+   "sequence": "course_pattern",
+   "beta2": 0.99,
+   "beta2_label": "0.99 (our GPT runs)",
+   "step1_ratio_noBC_over_BC": 0.9999998200000353,
+   "max_ratio_first20": 2.1310782711019294,
+   "argmax_ratio_first20": 13,
+   "ratio_at_step20": 2.058529797319986,
+   "stopped_mattering_within_20_steps": false,
+   "t_star": 237,
+   "t_star_sensitivity": {
+    "0.01": 391,
+    "0.02": 324,
+    "0.05": 237,
+    "0.1": 175
+   },
+   "t_star_window5": 237,
+   "t_star_window20": 237,
+   "max_rel_dev_from_analytic_ratio": 1.7999996404505238e-07,
+   "weight_gap_at_20": -0.01860334670104813,
+   "weight_gap_at_t_star": -0.07766585168021334,
+   "weight_gap_at_10000": -0.08235813960821581
+  },
+  {
+   "sequence": "zero_mean_noise",
+   "beta2": 0.999,
+   "beta2_label": "0.999 (course / PyTorch default)",
+   "step1_ratio_noBC_over_BC": 3.1622756035458175,
+   "max_ratio_first20": 6.5685189682614835,
+   "argmax_ratio_first20": 12,
+   "ratio_at_step20": 6.240927549114025,
+   "stopped_mattering_within_20_steps": false,
+   "t_star": 2375,
+   "t_star_sensitivity": {
+    "0.01": 3925,
+    "0.02": 3247,
+    "0.05": 2375,
+    "0.1": 1751
+   },
+   "t_star_window5": 2375,
+   "t_star_window20": 2375,
+   "max_rel_dev_from_analytic_ratio": 6.50361157628402e-07,
+   "weight_gap_at_20": 0.02059035698119227,
+   "weight_gap_at_t_star": 0.020899893024011962,
+   "weight_gap_at_10000": 0.021799041665770957
+  },
+  {
+   "sequence": "zero_mean_noise",
+   "beta2": 0.99,
+   "beta2_label": "0.99 (our GPT runs)",
+   "step1_ratio_noBC_over_BC": 0.9999998088594904,
+   "max_ratio_first20": 2.1310782507799004,
+   "argmax_ratio_first20": 13,
+   "ratio_at_step20": 2.0585298028486125,
+   "stopped_mattering_within_20_steps": false,
+   "t_star": 237,
+   "t_star_sensitivity": {
+    "0.01": 391,
+    "0.02": 324,
+    "0.05": 237,
+    "0.1": 175
+   },
+   "t_star_window5": 237,
+   "t_star_window20": 237,
+   "max_rel_dev_from_analytic_ratio": 1.9114050897606218e-07,
+   "weight_gap_at_20": 0.004276225735396766,
+   "weight_gap_at_t_star": 0.005826122665414157,
+   "weight_gap_at_10000": 0.005640692018139326
+  }
+ ]
+}

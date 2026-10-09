@@ -1,0 +1,262 @@
+{
+ "stop_step": 200,
+ "planned_steps": 300,
+ "runs_per_schedule": {
+  "cosine300": 15,
+  "wsd300": 15,
+  "wsd_branch180": 15,
+  "cosine200": 15
+ },
+ "selected": {
+  "cosine300": {
+   "kind": "cosine300",
+   "lr": 0.00238,
+   "n_seeds": 3,
+   "val200_mean": 1.9446433333333333,
+   "val200_sd": 0.01983742506812151,
+   "val200_seed1337": 1.92207,
+   "train_eval200_mean": 1.7930533333333334,
+   "train_last10_200_mean": 1.8336206666666666,
+   "lr_at_200": 0.000884799,
+   "val300_mean": 1.7689266666666668,
+   "at_grid_edge": false
+  },
+  "wsd300": {
+   "kind": "wsd300",
+   "lr": 0.002,
+   "n_seeds": 3,
+   "val200_mean": 1.93551,
+   "val200_sd": 0.011812654231797429,
+   "val200_seed1337": 1.92227,
+   "train_eval200_mean": 1.7757866666666666,
+   "train_last10_200_mean": 1.8120273333333332,
+   "lr_at_200": 0.002,
+   "val300_mean": 1.7148,
+   "at_grid_edge": false
+  },
+  "wsd_branch180": {
+   "kind": "wsd_branch180",
+   "lr": 0.002,
+   "n_seeds": 3,
+   "val200_mean": 1.8996733333333333,
+   "val200_sd": 0.0008609490886999596,
+   "val200_seed1337": 1.89972,
+   "train_eval200_mean": 1.7358866666666666,
+   "train_last10_200_mean": 1.780311,
+   "lr_at_200": 0.0002,
+   "val300_mean": null,
+   "at_grid_edge": false
+  },
+  "cosine200": {
+   "kind": "cosine200",
+   "lr": 0.00283,
+   "n_seeds": 3,
+   "val200_mean": 2.0104933333333332,
+   "val200_sd": 0.020415262264622876,
+   "val200_seed1337": 1.98692,
+   "train_eval200_mean": 1.88512,
+   "train_last10_200_mean": 1.9191343333333333,
+   "lr_at_200": 0.000283,
+   "val300_mean": null,
+   "at_grid_edge": false
+  }
+ },
+ "selection_if_seed1337_only": {
+  "cosine300": 0.00238,
+  "wsd300": 0.002,
+  "wsd_branch180": 0.002,
+  "cosine200": 0.00283
+ },
+ "selection_if_tuned_on_step300": {
+  "cosine300": 0.00238,
+  "wsd300": 0.002
+ },
+ "paired_at_selected_lrs": {
+  "wsd300_minus_cosine300_val200": {
+   "per_seed": {
+    "7": -0.007589999999999986,
+    "1337": 0.00019999999999997797,
+    "2024": -0.020010000000000083
+   },
+   "mean": -0.009133333333333363,
+   "sd": 0.010193009042149136,
+   "all_same_sign": false
+  },
+  "wsd_branch_minus_cosine300_val200": {
+   "per_seed": {
+    "7": -0.05205000000000015,
+    "1337": -0.02234999999999987,
+    "2024": -0.060510000000000064
+   },
+   "mean": -0.04497000000000003,
+   "sd": 0.02004098799959735,
+   "all_same_sign": true
+  },
+  "cosine200_minus_cosine300_val200": {
+   "per_seed": {
+    "7": 0.06964000000000015,
+    "1337": 0.06485000000000007,
+    "2024": 0.0630599999999999
+   },
+   "mean": 0.06585000000000003,
+   "sd": 0.0034020728975142165,
+   "all_same_sign": true
+  },
+  "wsd300_minus_cosine300_val300": {
+   "per_seed": {
+    "7": -0.055460000000000065,
+    "1337": -0.0418099999999999,
+    "2024": -0.06511
+   },
+   "mean": -0.054126666666666656,
+   "sd": 0.011707084749558049,
+   "all_same_sign": true
+  }
+ },
+ "seed_sd_val200_at_selected": {
+  "cosine300": 0.01983742506812151,
+  "wsd300": 0.011812654231797429,
+  "wsd_branch180": 0.0008609490886999596,
+  "cosine200": 0.020415262264622876
+ },
+ "per_seed_at_selected": {
+  "cosine300": {
+   "7": {
+    "val200": 1.95256,
+    "train_eval200": 1.79849,
+    "train_last10_200": 1.838961,
+    "lr_at_200": 0.000884799,
+    "val300": 1.76973
+   },
+   "1337": {
+    "val200": 1.92207,
+    "train_eval200": 1.77358,
+    "train_last10_200": 1.822257,
+    "lr_at_200": 0.000884799,
+    "val300": 1.76023
+   },
+   "2024": {
+    "val200": 1.9593,
+    "train_eval200": 1.80709,
+    "train_last10_200": 1.8396439999999998,
+    "lr_at_200": 0.000884799,
+    "val300": 1.77682
+   }
+  },
+  "wsd300": {
+   "7": {
+    "val200": 1.94497,
+    "train_eval200": 1.77433,
+    "train_last10_200": 1.819867,
+    "lr_at_200": 0.002,
+    "val300": 1.71427
+   },
+   "1337": {
+    "val200": 1.92227,
+    "train_eval200": 1.77956,
+    "train_last10_200": 1.816957,
+    "lr_at_200": 0.002,
+    "val300": 1.71842
+   },
+   "2024": {
+    "val200": 1.93929,
+    "train_eval200": 1.77347,
+    "train_last10_200": 1.799258,
+    "lr_at_200": 0.002,
+    "val300": 1.71171
+   }
+  },
+  "wsd_branch180": {
+   "7": {
+    "val200": 1.90051,
+    "train_eval200": 1.74182,
+    "train_last10_200": 1.7881930000000001,
+    "lr_at_200": 0.0002,
+    "val300": null
+   },
+   "1337": {
+    "val200": 1.89972,
+    "train_eval200": 1.7378,
+    "train_last10_200": 1.787613,
+    "lr_at_200": 0.0002,
+    "val300": null
+   },
+   "2024": {
+    "val200": 1.89879,
+    "train_eval200": 1.72804,
+    "train_last10_200": 1.7651270000000001,
+    "lr_at_200": 0.0002,
+    "val300": null
+   }
+  },
+  "cosine200": {
+   "7": {
+    "val200": 2.0222,
+    "train_eval200": 1.90339,
+    "train_last10_200": 1.933587,
+    "lr_at_200": 0.000283,
+    "val300": null
+   },
+   "1337": {
+    "val200": 1.98692,
+    "train_eval200": 1.85309,
+    "train_last10_200": 1.8973559999999998,
+    "lr_at_200": 0.000283,
+    "val300": null
+   },
+   "2024": {
+    "val200": 2.02236,
+    "train_eval200": 1.89888,
+    "train_last10_200": 1.92646,
+    "lr_at_200": 0.000283,
+    "val300": null
+   }
+  }
+ },
+ "literal_stop200_reruns": {
+  "cosine300": {
+   "run_id": "final__w384__cosine300__lr0.00238__wu30__bc1__s1337",
+   "peak_lr": 0.00238,
+   "val200": 1.91657,
+   "train_eval200": 1.76391,
+   "train_last10_200": 1.8083459999999998,
+   "lr_at_200": 0.000884799,
+   "gpu": "NVIDIA A10",
+   "tuning_run_val200_same_seed": 1.92207,
+   "tuning_run_gpu": "NVIDIA A10G",
+   "rerun_minus_tuning_val200": -0.005499999999999838,
+   "checkpoint": {
+    "path_on_volume": "/vol/final__w384__cosine300__lr0.00238__wu30__bc1__s1337/main_step200.pt",
+    "weights_sha": "dacb44d4797c7e1f",
+    "reloaded_val": 1.9165722726405352
+   }
+  },
+  "wsd300": {
+   "run_id": "final__w384__wsd300__lr0.002__wu30__bc1__s1337",
+   "peak_lr": 0.002,
+   "val200": 1.93092,
+   "train_eval200": 1.77747,
+   "train_last10_200": 1.8266010000000001,
+   "lr_at_200": 0.002,
+   "gpu": "NVIDIA A10",
+   "tuning_run_val200_same_seed": 1.92227,
+   "tuning_run_gpu": "NVIDIA A10G",
+   "rerun_minus_tuning_val200": 0.008650000000000047,
+   "checkpoint": {
+    "path_on_volume": "/vol/final__w384__wsd300__lr0.002__wu30__bc1__s1337/main_step200.pt",
+    "weights_sha": "68a67c87444a3d3c",
+    "reloaded_val": 1.9309191824375898
+   }
+  },
+  "wsd_finish_from200": {
+   "from_step": 200,
+   "end_step": 222,
+   "val_end": 1.84519,
+   "val210": 1.89113,
+   "train_eval_end": 1.67592,
+   "lr_at_end": 0.0002,
+   "reloaded_val": 1.8451920958771102,
+   "sha_match": true
+  }
+ }
+}

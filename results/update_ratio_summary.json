@@ -1,0 +1,555 @@
+{
+ "lr": 0.002,
+ "warmup_end_configured": 30,
+ "criterion": "\"When does warm-up stop changing the ratio?\" is answered two ways, both fixed before the control runs existed:\n  A  within the main run: s_t = 9-step centred rolling median of r_t; reference R = median r over steps 100-180\n     (flat LR, before any decay). t_A = first step after which |s_t / R - 1| <= 20% holds through step 180.\n  B  against the no-warm-up control: t_B = first step after which s_t(warm-up 30) and s_t(warm-up 0) stay within\n     a factor 1.2 of each other through step 180, i.e. the step after which having had warm-up no longer shows.\nSensitivity: 10% / 30% bands. Reported per tensor, then as the median over tensors and per family.",
+ "tA": {
+  "0.1": {
+   "median": 146.0,
+   "min": 64,
+   "max": 180,
+   "n": 18,
+   "n_never": 21
+  },
+  "0.2": {
+   "median": 121.0,
+   "min": 57,
+   "max": 177,
+   "n": 26,
+   "n_never": 13
+  },
+  "0.3": {
+   "median": 96.5,
+   "min": 44,
+   "max": 175,
+   "n": 34,
+   "n_never": 5
+  }
+ },
+ "tB": {
+  "0.1": {
+   "median": 173.0,
+   "min": 148,
+   "max": 177,
+   "n": 7,
+   "n_never": 32
+  },
+  "0.2": {
+   "median": 155.5,
+   "min": 120,
+   "max": 179,
+   "n": 14,
+   "n_never": 25
+  },
+  "0.3": {
+   "median": 138.0,
+   "min": 86,
+   "max": 176,
+   "n": 18,
+   "n_never": 21
+  }
+ },
+ "tB_warmup60_vs_0": {
+  "0.1": {
+   "median": 154.0,
+   "min": 126,
+   "max": 179,
+   "n": 5,
+   "n_never": 34
+  },
+  "0.2": {
+   "median": 145.5,
+   "min": 92,
+   "max": 179,
+   "n": 14,
+   "n_never": 25
+  },
+  "0.3": {
+   "median": 137.0,
+   "min": 72,
+   "max": 179,
+   "n": 18,
+   "n_never": 21
+  }
+ },
+ "tB2_posthoc_warmup30_vs_60": {
+  "0.1": {
+   "median": 152.0,
+   "min": 50,
+   "max": 180,
+   "n": 34,
+   "n_never": 5
+  },
+  "0.2": {
+   "median": 123.5,
+   "min": 37,
+   "max": 172,
+   "n": 38,
+   "n_never": 1
+  },
+  "0.3": {
+   "median": 76.0,
+   "min": 34,
+   "max": 179,
+   "n": 39,
+   "n_never": 0
+  }
+ },
+ "per_family": {
+  "embedding (tied wte = lm_head)": {
+   "tA": {
+    "median": 57.0,
+    "min": 57,
+    "max": 57,
+    "n": 1,
+    "n_never": 0
+   },
+   "tB": {
+    "median": 120.0,
+    "min": 120,
+    "max": 120,
+    "n": 1,
+    "n_never": 0
+   },
+   "tB2_posthoc": {
+    "median": 37.0,
+    "min": 37,
+    "max": 37,
+    "n": 1,
+    "n_never": 0
+   },
+   "ref_ratio_median": 0.00954763,
+   "max_ratio_wu30_median": 0.026571,
+   "max_ratio_wu0_median": 0.0993111
+  },
+  "position embedding": {
+   "tA": {
+    "median": 129.0,
+    "min": 129,
+    "max": 129,
+    "n": 1,
+    "n_never": 0
+   },
+   "tB": {
+    "median": 138.0,
+    "min": 138,
+    "max": 138,
+    "n": 1,
+    "n_never": 0
+   },
+   "tB2_posthoc": {
+    "median": 45.0,
+    "min": 45,
+    "max": 45,
+    "n": 1,
+    "n_never": 0
+   },
+   "ref_ratio_median": 0.0175255,
+   "max_ratio_wu30_median": 0.0261881,
+   "max_ratio_wu0_median": 0.0999516
+  },
+  "LayerNorm gain": {
+   "tA": {
+    "median": 125.0,
+    "min": 84,
+    "max": 174,
+    "n": 5,
+    "n_never": 8
+   },
+   "tB": {
+    "median": 168.5,
+    "min": 135,
+    "max": 179,
+    "n": 8,
+    "n_never": 5
+   },
+   "tB2_posthoc": {
+    "median": 135.5,
+    "min": 47,
+    "max": 170,
+    "n": 12,
+    "n_never": 1
+   },
+   "ref_ratio_median": 0.000308212,
+   "max_ratio_wu30_median": 0.000453569,
+   "max_ratio_wu0_median": 0.00199697
+  },
+  "attn qkv": {
+   "tA": {
+    "median": 100.5,
+    "min": 57,
+    "max": 116,
+    "n": 6,
+    "n_never": 0
+   },
+   "tB": {
+    "median": 137.0,
+    "min": 121,
+    "max": 170,
+    "n": 3,
+    "n_never": 3
+   },
+   "tB2_posthoc": {
+    "median": 124.5,
+    "min": 40,
+    "max": 172,
+    "n": 6,
+    "n_never": 0
+   },
+   "ref_ratio_median": 0.014662950000000001,
+   "max_ratio_wu30_median": 0.01839465,
+   "max_ratio_wu0_median": 0.09841455
+  },
+  "attn out proj": {
+   "tA": {
+    "median": 153.0,
+    "min": 132,
+    "max": 174,
+    "n": 2,
+    "n_never": 4
+   },
+   "tB": {
+    "median": null,
+    "min": null,
+    "max": null,
+    "n": 0,
+    "n_never": 6
+   },
+   "tB2_posthoc": {
+    "median": 136.0,
+    "min": 71,
+    "max": 170,
+    "n": 6,
+    "n_never": 0
+   },
+   "ref_ratio_median": 0.019378100000000002,
+   "max_ratio_wu30_median": 0.028923699999999997,
+   "max_ratio_wu0_median": 0.3460625
+  },
+  "mlp up": {
+   "tA": {
+    "median": 124.0,
+    "min": 117,
+    "max": 177,
+    "n": 5,
+    "n_never": 1
+   },
+   "tB": {
+    "median": 160.0,
+    "min": 160,
+    "max": 160,
+    "n": 1,
+    "n_never": 5
+   },
+   "tB2_posthoc": {
+    "median": 120.0,
+    "min": 66,
+    "max": 157,
+    "n": 6,
+    "n_never": 0
+   },
+   "ref_ratio_median": 0.00963829,
+   "max_ratio_wu30_median": 0.01264285,
+   "max_ratio_wu0_median": 0.09986045
+  },
+  "mlp down": {
+   "tA": {
+    "median": 121.0,
+    "min": 115,
+    "max": 172,
+    "n": 6,
+    "n_never": 0
+   },
+   "tB": {
+    "median": null,
+    "min": null,
+    "max": null,
+    "n": 0,
+    "n_never": 6
+   },
+   "tB2_posthoc": {
+    "median": 122.5,
+    "min": 81,
+    "max": 159,
+    "n": 6,
+    "n_never": 0
+   },
+   "ref_ratio_median": 0.01916435,
+   "max_ratio_wu30_median": 0.03354365,
+   "max_ratio_wu0_median": 0.346221
+  }
+ },
+ "largest_ratio_any_tensor_first180": {
+  "warmup30": 0.0482106,
+  "warmup0": 0.346606,
+  "warmup60": 0.0484393
+ },
+ "median_over_tensors_ratio_by_step": {
+  "1": 0.00331032,
+  "5": 0.007028,
+  "10": 0.0121541,
+  "20": 0.0128363,
+  "30": 0.0114374,
+  "40": 0.00670253,
+  "50": 0.00711257,
+  "75": 0.00808549,
+  "100": 0.0114979,
+  "150": 0.0116575,
+  "200": 0.0127593,
+  "250": 0.011931,
+  "300": 0.00140164
+ },
+ "median_over_tensors_ratio_by_step_warmup0": {
+  "1": 0.0993111,
+  "5": 0.0375298,
+  "10": 0.0267938,
+  "20": 0.0119937,
+  "30": 0.00960524,
+  "40": 0.00793273,
+  "50": 0.00921373,
+  "75": 0.00835926,
+  "100": 0.00771913,
+  "150": 0.0101516,
+  "200": 0.00913407
+ },
+ "median_over_matrices_ratio_by_step": {
+  "1": 0.0033313049999999997,
+  "5": 0.009676549999999999,
+  "10": 0.01677915,
+  "15": 0.020865,
+  "20": 0.019297799999999997,
+  "25": 0.01708325,
+  "30": 0.0158417,
+  "35": 0.01220565,
+  "40": 0.009346614999999999,
+  "50": 0.00831049,
+  "60": 0.00792913,
+  "75": 0.00933297,
+  "90": 0.01149315,
+  "100": 0.014969099999999999,
+  "120": 0.0137064,
+  "150": 0.016409649999999998,
+  "180": 0.0162908,
+  "200": 0.0164718,
+  "250": 0.0156515,
+  "300": 0.001623425
+ },
+ "median_over_matrices_ratio_by_step_warmup0": {
+  "1": 0.09994030000000001,
+  "5": 0.0447278,
+  "10": 0.03564525,
+  "20": 0.01366625,
+  "30": 0.015336800000000001,
+  "50": 0.0108059,
+  "100": 0.0096592,
+  "150": 0.01136115,
+  "200": 0.010058035
+ },
+ "median_over_matrices_ratio_by_step_warmup60": {
+  "1": 0.0016656549999999998,
+  "10": 0.00875258,
+  "20": 0.011143400000000001,
+  "30": 0.009853125,
+  "40": 0.00939212,
+  "50": 0.012125750000000001,
+  "60": 0.01476215,
+  "75": 0.0125624,
+  "100": 0.01558985,
+  "150": 0.01617205,
+  "200": 0.01602455
+ },
+ "extremes_median_over_matrices": {
+  "peak_step_1_60": 15,
+  "peak_value": 0.020865,
+  "trough_step_30_100": 60,
+  "trough_value": 0.00792913,
+  "adam_rms_over_lr_min_step_1_200": 61,
+  "adam_rms_over_lr_min_value": 0.0610706
+ },
+ "adam_rms_over_lr_median_by_step": {
+  "1": 0.99874,
+  "2": 0.760998,
+  "5": 0.417372,
+  "10": 0.333378,
+  "15": 0.244333,
+  "20": 0.175239,
+  "30": 0.107344,
+  "40": 0.0796492,
+  "50": 0.0728681,
+  "60": 0.0659054,
+  "75": 0.0755806,
+  "90": 0.0823271,
+  "100": 0.0993467,
+  "150": 0.131497,
+  "200": 0.161187
+ },
+ "adam_rms_over_lr_median_by_step_warmup0": {
+  "1": 0.998853,
+  "2": 0.706112,
+  "5": 0.382723,
+  "10": 0.211822,
+  "20": 0.112723,
+  "30": 0.190428,
+  "50": 0.146712,
+  "100": 0.102716,
+  "200": 0.117486
+ },
+ "controls_val": {
+  "wu0_bc1": {
+   "val200": 2.52345,
+   "val300": 2.48094,
+   "diverged_at": null,
+   "max_grad_norm_first50": 5442.9
+  },
+  "wu60_bc1": {
+   "val200": 1.92587,
+   "val300": 1.69988,
+   "diverged_at": null,
+   "max_grad_norm_first50": 14.78
+  },
+  "wu30_bc0": {
+   "val200": 2.1765,
+   "val300": 1.97755,
+   "diverged_at": null,
+   "max_grad_norm_first50": 17.0524
+  },
+  "wu0_bc0": {
+   "val200": 2.57208,
+   "val300": 2.51938,
+   "diverged_at": null,
+   "max_grad_norm_first50": 293.747
+  },
+  "wu30_bc1": {
+   "val200": 1.92227,
+   "val300": 1.71842,
+   "diverged_at": null,
+   "max_grad_norm_first50": 20.7254
+  }
+ },
+ "controls_all_seeds": {
+  "wu0_bc0": {
+   "per_seed": {
+    "1337": {
+     "val200": 2.57208,
+     "val300": 2.51938,
+     "max_grad_norm_first50": 293.747,
+     "max_ratio_any_tensor_first50": 0.345882
+    },
+    "2024": {
+     "val200": 2.62388,
+     "val300": 2.54353,
+     "max_grad_norm_first50": 42.9493,
+     "max_ratio_any_tensor_first50": 0.346041
+    },
+    "7": {
+     "val200": 2.65854,
+     "val300": 2.57106,
+     "max_grad_norm_first50": 14.0331,
+     "max_ratio_any_tensor_first50": 0.34611
+    }
+   },
+   "val300_mean": 2.544656666666667,
+   "val300_min": 2.51938,
+   "val300_max": 2.57106
+  },
+  "wu0_bc1": {
+   "per_seed": {
+    "1337": {
+     "val200": 2.52345,
+     "val300": 2.48094,
+     "max_grad_norm_first50": 5442.9,
+     "max_ratio_any_tensor_first50": 0.346606
+    },
+    "2024": {
+     "val200": 2.51997,
+     "val300": 2.47803,
+     "max_grad_norm_first50": 16.9255,
+     "max_ratio_any_tensor_first50": 0.346643
+    },
+    "7": {
+     "val200": 2.53422,
+     "val300": 2.48847,
+     "max_grad_norm_first50": 14.0328,
+     "max_ratio_any_tensor_first50": 0.346652
+    }
+   },
+   "val300_mean": 2.4824800000000002,
+   "val300_min": 2.47803,
+   "val300_max": 2.48847
+  },
+  "wu30_bc0": {
+   "per_seed": {
+    "1337": {
+     "val200": 2.1765,
+     "val300": 1.97755,
+     "max_grad_norm_first50": 17.0524,
+     "max_ratio_any_tensor_first50": 0.0791596
+    },
+    "2024": {
+     "val200": 1.99067,
+     "val300": 1.74693,
+     "max_grad_norm_first50": 40.6364,
+     "max_ratio_any_tensor_first50": 0.0705824
+    },
+    "7": {
+     "val200": 2.19303,
+     "val300": 1.9491,
+     "max_grad_norm_first50": 31.8063,
+     "max_ratio_any_tensor_first50": 0.0758316
+    }
+   },
+   "val300_mean": 1.891193333333333,
+   "val300_min": 1.74693,
+   "val300_max": 1.97755
+  },
+  "wu30_bc1": {
+   "per_seed": {
+    "1337": {
+     "val200": 1.92227,
+     "val300": 1.71842,
+     "max_grad_norm_first50": 20.7254,
+     "max_ratio_any_tensor_first50": 0.0424366
+    },
+    "2024": {
+     "val200": 1.93929,
+     "val300": 1.71171,
+     "max_grad_norm_first50": 15.5136,
+     "max_ratio_any_tensor_first50": 0.0388161
+    },
+    "7": {
+     "val200": 1.94497,
+     "val300": 1.71427,
+     "max_grad_norm_first50": 34.8057,
+     "max_ratio_any_tensor_first50": 0.0398827
+    }
+   },
+   "val300_mean": 1.7148,
+   "val300_min": 1.71171,
+   "val300_max": 1.71842
+  },
+  "wu60_bc1": {
+   "per_seed": {
+    "1337": {
+     "val200": 1.92587,
+     "val300": 1.69988,
+     "max_grad_norm_first50": 14.78,
+     "max_ratio_any_tensor_first50": 0.0339814
+    },
+    "2024": {
+     "val200": 1.94665,
+     "val300": 1.7049,
+     "max_grad_norm_first50": 15.5136,
+     "max_ratio_any_tensor_first50": 0.0302421
+    },
+    "7": {
+     "val200": 1.92403,
+     "val300": 1.70918,
+     "max_grad_norm_first50": 14.0328,
+     "max_ratio_any_tensor_first50": 0.0279692
+    }
+   },
+   "val300_mean": 1.7046533333333336,
+   "val300_min": 1.69988,
+   "val300_max": 1.70918
+  }
+ }
+}

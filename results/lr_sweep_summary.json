@@ -1,0 +1,204 @@
+{
+ "metric": "val loss at step 300 (WSD 300, decayed), whole val split",
+ "shared_config": {
+  "n_layer": 6,
+  "head_dim": 64,
+  "block_size": 256,
+  "micro_batch": 32,
+  "grad_accum": 2,
+  "total_steps": 300,
+  "stop_step": 300,
+  "schedule": "wsd",
+  "warmup": 30,
+  "decay_frac": 0.1,
+  "min_ratio": 0.1,
+  "betas": [
+   0.9,
+   0.99
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.1,
+  "grad_clip": 1.0,
+  "bias_correction": true,
+  "precision": "bf16",
+  "eval_steps": null,
+  "eval_every": 50,
+  "n_train_eval_seqs": 128,
+  "snapshot_steps": [],
+  "ckpt_steps": [],
+  "log_ratios": true,
+  "allow_divergence": true,
+  "divergence_loss": 8.0
+ },
+ "model_per_width": {
+  "256": {
+   "n_params": 4804096,
+   "n_head": 4,
+   "n_layer": 6,
+   "head_dim": 64,
+   "block_size": 256
+  },
+  "512": {
+   "n_params": 19045376,
+   "n_head": 8,
+   "n_layer": 6,
+   "head_dim": 64,
+   "block_size": 256
+  },
+  "1024": {
+   "n_params": 75839488,
+   "n_head": 16,
+   "n_layer": 6,
+   "head_dim": 64,
+   "block_size": 256
+  }
+ },
+ "seed_noise_sd_val": 0.020300757188446008,
+ "n_seed_sd_estimates": 11,
+ "minima": {
+  "256": {
+   "grid_min_lr": 0.004,
+   "grid_min_val": 1.7673266666666667,
+   "at_edge": false,
+   "vertex_lr": 0.0034254412028618558,
+   "curvature_per_log2lr2": 0.11606643066308998,
+   "neighbours": [
+    0.00283,
+    0.00566
+   ],
+   "n_runs": 17,
+   "lrs_tried": [
+    0.00025,
+    0.0005,
+    0.001,
+    0.002,
+    0.00283,
+    0.004,
+    0.00566,
+    0.008,
+    0.016
+   ],
+   "failed_lrs": [],
+   "grid_resolution_bracket": [
+    0.0033645207682521444,
+    0.004758150901348128
+   ],
+   "bootstrap_lr_star_pct_5_16_50_84_95": [
+    0.0031426061643124417,
+    0.003283266604036871,
+    0.003427660740402714,
+    0.0035218631561056103,
+    0.0035873109035010654
+   ]
+  },
+  "512": {
+   "grid_min_lr": 0.00141,
+   "grid_min_val": 1.6864466666666666,
+   "at_edge": false,
+   "vertex_lr": 0.0012348940765360612,
+   "curvature_per_log2lr2": 0.058218782837381085,
+   "neighbours": [
+    0.001,
+    0.002
+   ],
+   "n_runs": 15,
+   "lrs_tried": [
+    0.00025,
+    0.0005,
+    0.000707,
+    0.001,
+    0.00141,
+    0.002,
+    0.004,
+    0.008,
+    0.016
+   ],
+   "failed_lrs": [],
+   "grid_resolution_bracket": [
+    0.0011874342087037917,
+    0.0016792855623746666
+   ],
+   "bootstrap_lr_star_pct_5_16_50_84_95": [
+    0.0007904060473271715,
+    0.0008384490177993162,
+    0.0012157069734819576,
+    0.0013119561332020611,
+    0.001375574578939712
+   ]
+  },
+  "1024": {
+   "grid_min_lr": 0.000354,
+   "grid_min_val": 1.68401,
+   "at_edge": false,
+   "vertex_lr": 0.00041323397810271974,
+   "curvature_per_log2lr2": 0.08712881780903574,
+   "neighbours": [
+    0.00025,
+    0.0005
+   ],
+   "n_runs": 17,
+   "lrs_tried": [
+    0.00025,
+    0.000354,
+    0.0005,
+    0.000707,
+    0.001,
+    0.002,
+    0.004,
+    0.008,
+    0.016
+   ],
+   "failed_lrs": [],
+   "grid_resolution_bracket": [
+    0.0002974894956128703,
+    0.0004207136793592526
+   ],
+   "bootstrap_lr_star_pct_5_16_50_84_95": [
+    0.000397373586605234,
+    0.0004036987584206316,
+    0.00041347622416693216,
+    0.000423841200728934,
+    0.0004304404459988118
+   ]
+  }
+ },
+ "fit": {
+  "log2_lr_star = a + b log2 width": {
+   "a": 4.033450663479951,
+   "b": -1.5256295160625506
+  },
+  "lr_star_used": {
+   "256": 0.0034254412028618558,
+   "512": 0.0012348940765360612,
+   "1024": 0.00041323397810271974
+  },
+  "residuals_log2": {
+   "256": -0.017908997937363225,
+   "512": 0.0358179958747229,
+   "1024": -0.017908997937357896
+  },
+  "lr_at_4096": 5.047387832827541e-05,
+  "lr_at_4096_from_grid_minima_only": 3.315194613179885e-05,
+  "slope_from_grid_minima_only": -1.7490893672895464,
+  "bootstrap_lr_at_4096_pct_5_16_50_84_95": [
+   4.2380327610081686e-05,
+   4.551788525324846e-05,
+   4.988344368413478e-05,
+   5.4066651769068614e-05,
+   5.720131563053654e-05
+  ],
+  "course_inverse_width_rule_from_1024": 0.00010330849452567994,
+  "course_inverse_width_rule_from_256": 0.00021409007517886599,
+  "leave_one_out": {
+   "slope_256_512": -1.4719025222504654,
+   "predicted_1024": 0.00044518743424636266,
+   "measured_1024": 0.00041323397810271974,
+   "ratio_pred_over_measured": 1.0773253358553687
+  },
+  "pairwise_slopes": {
+   "256->512": -1.4719025222504651,
+   "512->1024": -1.579356509874632
+  },
+  "course_table_value_4096": 0.00019
+ }
+}

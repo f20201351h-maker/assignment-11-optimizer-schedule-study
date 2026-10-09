@@ -1,0 +1,122 @@
+done final__w384__cosine300__lr0.00238__wu30__bc1__s1337  19s  NVIDIA A10  val@200=1.9166  diverged=None
+done final__w384__wsd300__lr0.002__wu30__bc1__s1337  20s  NVIDIA A10  val@200=1.9309  diverged=None
+plan final_stop200 finished in 27s
+done sched__w384__cosine300__lr0.00238__wu30__bc1__s1337  30s  NVIDIA A10G  val@300=1.7602  diverged=None
+done sched__w384__wsd300__lr0.00238__wu30__bc1__s1337  20s  NVIDIA A10G  val@300=1.7175  diverged=None
+done sched__w384__cosine200__lr0.00238__wu30__bc1__s1337  18s  NVIDIA A10G  val@200=2.0227  diverged=None
+done sched__w384__cosine300__lr0.00336__wu30__bc1__s1337  24s  NVIDIA A10G  val@300=1.7702  diverged=None
+done sched__w384__wsd300__lr0.00336__wu30__bc1__s1337  25s  NVIDIA A10G  val@300=1.7442  diverged=None
+done sched__w384__cosine200__lr0.00336__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=2.0150  diverged=None
+plan schedules finished in 80s
+done sched__w384__cosine300__lr0.002__wu30__bc1__s2024  26s  NVIDIA A10G  val@300=1.7744  diverged=None
+done sched__w384__wsd300__lr0.002__wu30__bc1__s2024  26s  NVIDIA A10G  val@300=1.7117  diverged=None
+done sched__w384__cosine200__lr0.002__wu30__bc1__s2024  13s  NVIDIA A10G  val@200=2.0070  diverged=None
+done sched__w384__cosine300__lr0.002__wu30__bc1__s7  19s  NVIDIA A10G  val@300=1.7700  diverged=None
+done sched__w384__wsd300__lr0.002__wu30__bc1__s7  20s  NVIDIA A10G  val@300=1.7143  diverged=None
+done sched__w384__cosine200__lr0.002__wu30__bc1__s7  13s  NVIDIA A10G  val@200=2.0346  diverged=None
+done sched__w384__cosine300__lr0.00238__wu30__bc1__s2024  19s  NVIDIA A10G  val@300=1.7768  diverged=None
+done sched__w384__wsd300__lr0.00238__wu30__bc1__s2024  20s  NVIDIA A10G  val@300=1.7330  diverged=None
+done sched__w384__cosine200__lr0.00238__wu30__bc1__s2024  13s  NVIDIA A10G  val@200=2.0250  diverged=None
+done sched__w384__cosine300__lr0.00238__wu30__bc1__s7  19s  NVIDIA A10G  val@300=1.7697  diverged=None
+done sched__w384__wsd300__lr0.00238__wu30__bc1__s7  22s  NVIDIA A10  val@300=1.7122  diverged=None
+done sched__w384__cosine200__lr0.00238__wu30__bc1__s7  18s  NVIDIA A10G  val@200=2.0305  diverged=None
+done sched__w384__cosine300__lr0.00283__wu30__bc1__s2024  20s  NVIDIA A10G  val@300=1.7745  diverged=None
+done sched__w384__wsd300__lr0.00283__wu30__bc1__s2024  20s  NVIDIA A10G  val@300=1.7592  diverged=None
+done sched__w384__cosine200__lr0.00283__wu30__bc1__s2024  13s  NVIDIA A10G  val@200=2.0224  diverged=None
+done sched__w384__cosine300__lr0.00283__wu30__bc1__s7  18s  NVIDIA A10  val@300=1.7743  diverged=None
+done sched__w384__wsd300__lr0.00283__wu30__bc1__s7  21s  NVIDIA A10G  val@300=1.7363  diverged=None
+done sched__w384__cosine200__lr0.00283__wu30__bc1__s7  13s  NVIDIA A10G  val@200=2.0222  diverged=None
+plan schedules finished in 136s
+done sched__w384__cosine300__lr0.001__wu30__bc1__s1337  25s  NVIDIA A10G  val@300=1.8872  diverged=None
+done sched__w384__wsd300__lr0.001__wu30__bc1__s1337  26s  NVIDIA A10G  val@300=1.7544  diverged=None
+done sched__w384__cosine200__lr0.001__wu30__bc1__s1337  19s  NVIDIA A10G  val@200=2.1607  diverged=None
+done sched__w384__cosine300__lr0.00141__wu30__bc1__s1337  25s  NVIDIA A10G  val@300=1.8320  diverged=None
+done sched__w384__wsd300__lr0.00141__wu30__bc1__s1337  32s  NVIDIA A10G  val@300=1.7241  diverged=None
+done sched__w384__cosine200__lr0.00141__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=2.0856  diverged=None
+done sched__w384__cosine300__lr0.002__wu30__bc1__s1337  19s  NVIDIA A10G  val@300=1.7768  diverged=None
+done sched__w384__wsd300__lr0.002__wu30__bc1__s1337  20s  NVIDIA A10G  val@300=1.7184  diverged=None
+done sched__w384__cosine200__lr0.002__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=2.0429  diverged=None
+done sched__w384__cosine300__lr0.00283__wu30__bc1__s1337  19s  NVIDIA A10G  val@300=1.7677  diverged=None
+done sched__w384__wsd300__lr0.00283__wu30__bc1__s1337  20s  NVIDIA A10G  val@300=1.7217  diverged=None
+done sched__w384__cosine200__lr0.00283__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=1.9869  diverged=None
+done sched__w384__cosine300__lr0.004__wu30__bc1__s1337  19s  NVIDIA A10G  val@300=2.1222  diverged=None
+done sched__w384__wsd300__lr0.004__wu30__bc1__s1337  20s  NVIDIA A10G  val@300=2.0651  diverged=None
+done sched__w384__cosine200__lr0.004__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=2.3274  diverged=None
+done sched__w384__cosine300__lr0.00566__wu30__bc1__s1337  19s  NVIDIA A10G  val@300=2.4810  diverged=None
+done sched__w384__wsd300__lr0.00566__wu30__bc1__s1337  20s  NVIDIA A10G  val@300=2.4971  diverged=None
+done sched__w384__cosine200__lr0.00566__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=2.4916  diverged=None
+done sched__w384__cosine300__lr0.008__wu30__bc1__s1337  19s  NVIDIA A10G  val@300=2.4983  diverged=None
+done sched__w384__wsd300__lr0.008__wu30__bc1__s1337  20s  NVIDIA A10G  val@300=2.5113  diverged=None
+done sched__w384__cosine200__lr0.008__wu30__bc1__s1337  13s  NVIDIA A10G  val@200=2.5061  diverged=None
+plan schedules finished in 97s
+done sweep__w256__wsd300__lr0.00025__wu30__bc1__s1337  13s  NVIDIA A10  val@300=2.1841  diverged=None
+done sweep__w256__wsd300__lr0.0005__wu30__bc1__s1337  13s  NVIDIA A10  val@300=2.0533  diverged=None
+done sweep__w256__wsd300__lr0.001__wu30__bc1__s1337  13s  NVIDIA A10  val@300=1.9519  diverged=None
+done sweep__w256__wsd300__lr0.002__wu30__bc1__s1337  13s  NVIDIA A10  val@300=1.7908  diverged=None
+done sweep__w256__wsd300__lr0.004__wu30__bc1__s1337  9s  NVIDIA A10  val@300=1.7622  diverged=None
+done sweep__w256__wsd300__lr0.008__wu30__bc1__s1337  9s  NVIDIA A10  val@300=2.2128  diverged=None
+done sweep__w256__wsd300__lr0.016__wu30__bc1__s1337  9s  NVIDIA A10  val@300=2.5911  diverged=None
+done sweep__w512__wsd300__lr0.00025__wu30__bc1__s1337  21s  NVIDIA A10  val@300=1.9208  diverged=None
+done sweep__w512__wsd300__lr0.0005__wu30__bc1__s1337  21s  NVIDIA A10  val@300=1.7639  diverged=None
+done sweep__w512__wsd300__lr0.001__wu30__bc1__s1337  21s  NVIDIA A10  val@300=1.6955  diverged=None
+done sweep__w512__wsd300__lr0.002__wu30__bc1__s1337  21s  NVIDIA A10  val@300=1.7399  diverged=None
+done sweep__w512__wsd300__lr0.004__wu30__bc1__s1337  21s  NVIDIA A10  val@300=2.4886  diverged=None
+done sweep__w512__wsd300__lr0.008__wu30__bc1__s1337  21s  NVIDIA A10  val@300=2.5343  diverged=None
+done sweep__w512__wsd300__lr0.016__wu30__bc1__s1337  21s  NVIDIA A10  val@300=2.6725  diverged=None
+done sweep__w1024__wsd300__lr0.00025__wu30__bc1__s1337  61s  NVIDIA A10  val@300=1.7286  diverged=None
+done sweep__w1024__wsd300__lr0.0005__wu30__bc1__s1337  63s  NVIDIA A10  val@300=1.6819  diverged=None
+done sweep__w1024__wsd300__lr0.001__wu30__bc1__s1337  61s  NVIDIA A10  val@300=1.8719  diverged=None
+done sweep__w1024__wsd300__lr0.002__wu30__bc1__s1337  62s  NVIDIA A10  val@300=2.4970  diverged=None
+done sweep__w1024__wsd300__lr0.004__wu30__bc1__s1337  61s  NVIDIA A10  val@300=2.5282  diverged=None
+done sweep__w1024__wsd300__lr0.008__wu30__bc1__s1337  63s  NVIDIA A10  val@300=2.5946  diverged=None
+done sweep__w1024__wsd300__lr0.016__wu30__bc1__s1337  61s  NVIDIA A10  val@300=2.7658  diverged=None
+plan sweep finished in 189s
+done sweep__w1024__wsd300__lr0.000354__wu30__bc1__s1337  71s  NVIDIA A10G  val@300=1.6814  diverged=None
+done sweep__w1024__wsd300__lr0.000707__wu30__bc1__s1337  72s  NVIDIA A10G  val@300=1.7562  diverged=None
+plan sweep finished in 81s
+done sweep__w256__wsd300__lr0.00283__wu30__bc1__s1337  16s  NVIDIA A10G  val@300=1.7621  diverged=None
+done sweep__w256__wsd300__lr0.00566__wu30__bc1__s1337  15s  NVIDIA A10G  val@300=1.8565  diverged=None
+plan sweep finished in 26s
+done sweep__w512__wsd300__lr0.000707__wu30__bc1__s1337  29s  NVIDIA A10G  val@300=1.7051  diverged=None
+done sweep__w512__wsd300__lr0.00141__wu30__bc1__s1337  29s  NVIDIA A10G  val@300=1.6865  diverged=None
+plan sweep finished in 90s
+done sweep__w256__wsd300__lr0.002__wu30__bc1__s2024  13s  NVIDIA A10  val@300=1.7990  diverged=None
+done sweep__w256__wsd300__lr0.002__wu30__bc1__s7  13s  NVIDIA A10  val@300=1.7849  diverged=None
+done sweep__w256__wsd300__lr0.00283__wu30__bc1__s2024  15s  NVIDIA A10G  val@300=1.7752  diverged=None
+done sweep__w256__wsd300__lr0.00283__wu30__bc1__s7  18s  NVIDIA A10G  val@300=1.7738  diverged=None
+done sweep__w256__wsd300__lr0.004__wu30__bc1__s2024  9s  NVIDIA A10  val@300=1.7765  diverged=None
+done sweep__w256__wsd300__lr0.004__wu30__bc1__s7  9s  NVIDIA A10  val@300=1.7633  diverged=None
+done sweep__w256__wsd300__lr0.00566__wu30__bc1__s2024  9s  NVIDIA A10G  val@300=1.8245  diverged=None
+done sweep__w256__wsd300__lr0.00566__wu30__bc1__s7  9s  NVIDIA A10G  val@300=1.7863  diverged=None
+done sweep__w512__wsd300__lr0.001__wu30__bc1__s2024  21s  NVIDIA A10  val@300=1.6989  diverged=None
+done sweep__w512__wsd300__lr0.001__wu30__bc1__s7  21s  NVIDIA A10  val@300=1.6747  diverged=None
+done sweep__w512__wsd300__lr0.00141__wu30__bc1__s2024  23s  NVIDIA A10G  val@300=1.6927  diverged=None
+done sweep__w512__wsd300__lr0.00141__wu30__bc1__s7  23s  NVIDIA A10G  val@300=1.6801  diverged=None
+done sweep__w512__wsd300__lr0.002__wu30__bc1__s2024  21s  NVIDIA A10  val@300=1.6935  diverged=None
+done sweep__w512__wsd300__lr0.002__wu30__bc1__s7  21s  NVIDIA A10  val@300=1.7041  diverged=None
+done sweep__w1024__wsd300__lr0.00025__wu30__bc1__s2024  65s  NVIDIA A10G  val@300=1.7330  diverged=None
+done sweep__w1024__wsd300__lr0.00025__wu30__bc1__s7  65s  NVIDIA A10G  val@300=1.7148  diverged=None
+done sweep__w1024__wsd300__lr0.000354__wu30__bc1__s2024  64s  NVIDIA A10  val@300=1.6897  diverged=None
+done sweep__w1024__wsd300__lr0.000354__wu30__bc1__s7  63s  NVIDIA A10  val@300=1.6809  diverged=None
+done sweep__w1024__wsd300__lr0.0005__wu30__bc1__s2024  65s  NVIDIA A10G  val@300=1.6837  diverged=None
+done sweep__w1024__wsd300__lr0.0005__wu30__bc1__s7  65s  NVIDIA A10G  val@300=1.6931  diverged=None
+done sweep__w1024__wsd300__lr0.000707__wu30__bc1__s2024  63s  NVIDIA A10  val@300=1.6939  diverged=None
+done sweep__w1024__wsd300__lr0.000707__wu30__bc1__s7  65s  NVIDIA A10  val@300=1.7853  diverged=None
+plan sweep_seeds finished in 198s
+final__w384__cosine300__lr0.00238__wu30__bc1__s1337 main 200 logged 1.91657 reloaded 1.91657 opt steps [200] sha match True
+final__w384__wsd300__lr0.002__wu30__bc1__s1337 main 200 logged 1.93092 reloaded 1.93092 opt steps [200] sha match True
+final__w384__wsd300__lr0.002__wu30__bc1__s1337 wsd_finish_from200 222 logged 1.84519 reloaded 1.84519 opt steps [222] sha match True
+done warmup__w384__wsd300__lr0.002__wu0__bc1__s1337  22s  NVIDIA A10  val@300=2.4809  diverged=None
+done warmup__w384__wsd300__lr0.002__wu60__bc1__s1337  26s  NVIDIA A10G  val@300=1.6999  diverged=None
+done warmup__w384__wsd300__lr0.002__wu30__bc0__s1337  25s  NVIDIA A10G  val@300=1.9775  diverged=None
+done warmup__w384__wsd300__lr0.002__wu0__bc0__s1337  27s  NVIDIA A10G  val@300=2.5194  diverged=None
+plan warmup_controls finished in 49s
+done warmup__w384__wsd300__lr0.002__wu0__bc1__s2024  25s  NVIDIA A10G  val@300=2.4780  diverged=None
+done warmup__w384__wsd300__lr0.002__wu0__bc1__s7  25s  NVIDIA A10G  val@300=2.4885  diverged=None
+done warmup__w384__wsd300__lr0.002__wu60__bc1__s2024  19s  NVIDIA A10G  val@300=1.7049  diverged=None
+done warmup__w384__wsd300__lr0.002__wu60__bc1__s7  19s  NVIDIA A10G  val@300=1.7092  diverged=None
+done warmup__w384__wsd300__lr0.002__wu30__bc0__s2024  19s  NVIDIA A10G  val@300=1.7469  diverged=None
+done warmup__w384__wsd300__lr0.002__wu30__bc0__s7  19s  NVIDIA A10G  val@300=1.9491  diverged=None
+done warmup__w384__wsd300__lr0.002__wu0__bc0__s2024  21s  NVIDIA A10  val@300=2.5435  diverged=None
+done warmup__w384__wsd300__lr0.002__wu0__bc0__s7  21s  NVIDIA A10  val@300=2.5711  diverged=None
+plan warmup_controls finished in 76s

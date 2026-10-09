@@ -1,0 +1,135 @@
+{
+ "torch": "2.14.0+cpu",
+ "checks": [
+  {
+   "check": "Tiny Shakespeare: 65 symbols",
+   "passed": true,
+   "detail": "86c4e6aa9db7c042"
+  },
+  {
+   "check": "two tiny models start identical",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ManualAdamW(bias_correction=True) == torch AdamW over 15 steps (fp64)",
+   "passed": true,
+   "detail": "max |diff| 0.00e+00"
+  },
+  {
+   "check": "no-BC first step = 0.1/sqrt(0.001) * lr",
+   "passed": true,
+   "detail": "3.162278 lr"
+  },
+  {
+   "check": "schedule boundary values",
+   "passed": true,
+   "detail": "{'cosine_step1': 3.3333333333333335e-05, 'cosine_at_warmup_end': 0.001, 'cosine_at_total': 0.0001, 'cosine_midpoint': 0.00055, 'wsd_step1': 3.3333333333333335e-05, 'wsd_at_warmup_end': 0.001, 'wsd_decay_start': 270, 'wsd_at_decay_start': 0.001, 'wsd_first_decay_step': 0.00097, 'wsd_at_total': 0.0001}"
+  },
+  {
+   "check": "WSD planned 300 decays over steps 271..300",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "WSD planned 200 decays over steps 181..200",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cosine and WSD runs start from identical weights",
+   "passed": true,
+   "detail": "1b51103bd147e681"
+  },
+  {
+   "check": "cosine and WSD runs see identical batches",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "identical step-1 loss (same init, same batch)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "identical LR through warm-up",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "branch replays the main run's batches for steps 19-20",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "branch ends at the min LR",
+   "passed": true,
+   "detail": "0.00030000000000000003"
+  },
+  {
+   "check": "all update-to-weight ratios finite and positive",
+   "passed": true,
+   "detail": "360 values"
+  },
+  {
+   "check": "one ratio per parameter tensor",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "logged ratio equals an independent ||W_after - W_before|| / ||W_before||",
+   "passed": true,
+   "detail": "max rel err 2.3e-07"
+  },
+  {
+   "check": "step 1: Adam part of the update has RMS ~= lr in every tensor",
+   "passed": true,
+   "detail": "min 0.99781 max 0.99999"
+  },
+  {
+   "check": "width 256: params match 65C + 256C + L(12C^2 + 2C) + C",
+   "passed": true,
+   "detail": "4,804,096 heads=4"
+  },
+  {
+   "check": "width 256: nothing but width/heads differs from the width-256 config",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "width 384: params match 65C + 256C + L(12C^2 + 2C) + C",
+   "passed": true,
+   "detail": "10,745,088 heads=6"
+  },
+  {
+   "check": "width 384: nothing but width/heads differs from the width-256 config",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "width 512: params match 65C + 256C + L(12C^2 + 2C) + C",
+   "passed": true,
+   "detail": "19,045,376 heads=8"
+  },
+  {
+   "check": "width 512: nothing but width/heads differs from the width-256 config",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "width 1024: params match 65C + 256C + L(12C^2 + 2C) + C",
+   "passed": true,
+   "detail": "75,839,488 heads=16"
+  },
+  {
+   "check": "width 1024: nothing but width/heads differs from the width-256 config",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "parameter count increases with width",
+   "passed": true,
+   "detail": "[(256, 4, 4804096), (384, 6, 10745088), (512, 8, 19045376), (1024, 16, 75839488)]"
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "n_checks": 46,
+ "n_failed": 0,
+ "checks": [
+  {
+   "check": "Adam table recomputed from the summation form",
+   "passed": true,
+   "detail": "max abs diff 5.6e-17"
+  },
+  {
+   "check": "by hand vs torch float64 / float32 within stated tolerance",
+   "passed": true,
+   "detail": "4.8e-17 / 2.2e-08"
+  },
+  {
+   "check": "course table reproduced at printed precision",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "t* course_pattern beta2=0.999 equals the eps-free closed form",
+   "passed": true,
+   "detail": "2375 vs 2375"
+  },
+  {
+   "check": "t* course_pattern beta2=0.99 equals the eps-free closed form",
+   "passed": true,
+   "detail": "237 vs 237"
+  },
+  {
+   "check": "t* zero_mean_noise beta2=0.999 equals the eps-free closed form",
+   "passed": true,
+   "detail": "2375 vs 2375"
+  },
+  {
+   "check": "t* zero_mean_noise beta2=0.99 equals the eps-free closed form",
+   "passed": true,
+   "detail": "237 vs 237"
+  },
+  {
+   "check": "step-1 ratio without BC is 0.1/sqrt(0.001) for beta2=0.999 (eps=1e-8 shifts it ~1e-6 relative)",
+   "passed": true,
+   "detail": "[3.1622757234151555, 3.1622756035458175] vs 3.1622777"
+  },
+  {
+   "check": "every logged LR matches the schedule formula",
+   "passed": true,
+   "detail": "31102 steps, max rel err 3.5e-06 (values stored to 6 s.f.)"
+  },
+  {
+   "check": "step-1 ratio = lr_1 / init RMS for all 39 tensors",
+   "passed": true,
+   "detail": "max rel dev 0.024 (sampling noise of the init RMS + tiny-|g| entries)"
+  },
+  {
+   "check": "all logged ratios finite and positive",
+   "passed": true,
+   "detail": "1,200,420 values"
+  },
+  {
+   "check": "seed 2024: all 9 schedule runs share one init",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "seed 2024: all schedule runs saw identical batches 1..200",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "seed 1337: all 27 schedule runs share one init",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "seed 1337: all schedule runs saw identical batches 1..200",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "seed 7: all 9 schedule runs share one init",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "seed 7: all schedule runs saw identical batches 1..200",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "equal tuning effort (runs) for cosine and WSD",
+   "passed": true,
+   "detail": "{'cosine300': 15, 'wsd300': 15}"
+  },
+  {
+   "check": "cosine300: selected-LR val@200 mean recomputed",
+   "passed": true,
+   "detail": "1.9446"
+  },
+  {
+   "check": "cosine300: selected LR is the 3-seed argmin",
+   "passed": true,
+   "detail": "0.00238"
+  },
+  {
+   "check": "wsd300: selected-LR val@200 mean recomputed",
+   "passed": true,
+   "detail": "1.9355"
+  },
+  {
+   "check": "wsd300: selected LR is the 3-seed argmin",
+   "passed": true,
+   "detail": "0.002"
+  },
+  {
+   "check": "step-200 checkpoints reload to the logged val loss, weights hash and optimizer step",
+   "passed": true,
+   "detail": "cosine300/main@200: 1.91657; wsd300/main@200: 1.93092; wsd300/wsd_finish_from200@222: 1.84519"
+  },
+  {
+   "check": "width 256: grid minimum recomputed",
+   "passed": true,
+   "detail": "0.004 val 1.7673 (3 seeds)"
+  },
+  {
+   "check": "width 256: minimum not at grid edge",
+   "passed": true,
+   "detail": "grid 0.00025..0.016"
+  },
+  {
+   "check": "width 256: parabola vertex recomputed",
+   "passed": true,
+   "detail": "0.003425"
+  },
+  {
+   "check": "width 256: sweep runs differ only in width/LR/seed",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "width 512: grid minimum recomputed",
+   "passed": true,
+   "detail": "0.00141 val 1.6864 (3 seeds)"
+  },
+  {
+   "check": "width 512: minimum not at grid edge",
+   "passed": true,
+   "detail": "grid 0.00025..0.016"
+  },
+  {
+   "check": "width 512: parabola vertex recomputed",
+   "passed": true,
+   "detail": "0.001235"
+  },
+  {
+   "check": "width 512: sweep runs differ only in width/LR/seed",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "width 1024: grid minimum recomputed",
+   "passed": true,
+   "detail": "0.000354 val 1.6840 (3 seeds)"
+  },
+  {
+   "check": "width 1024: minimum not at grid edge",
+   "passed": true,
+   "detail": "grid 0.00025..0.016"
+  },
+  {
+   "check": "width 1024: parabola vertex recomputed",
+   "passed": true,
+   "detail": "0.0004132"
+  },
+  {
+   "check": "width 1024: sweep runs differ only in width/LR/seed",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "log-log slope and width-4096 LR recomputed by hand",
+   "passed": true,
+   "detail": "slope -1.526, LR(4096) 5.05e-05"
+  },
+  {
+   "check": "parameter count rises with width",
+   "passed": true,
+   "detail": "[4804096, 19045376, 75839488]"
+  },
+  {
+   "check": "ledger has no duplicate successful run ids",
+   "passed": true,
+   "detail": "110 jobs"
+  },
+  {
+   "check": "every result file holds the run its name claims",
+   "passed": true,
+   "detail": "110 files"
+  },
+  {
+   "check": "every successful job has exactly one result file",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "each result came from a recorded Modal task",
+   "passed": true,
+   "detail": "39 distinct containers for 110 runs"
+  },
+  {
+   "check": "no two runs share an identical final log record (no overwrite / crossed outputs)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "every planned candidate has a result",
+   "passed": true,
+   "detail": "108 planned, missing []"
+  },
+  {
+   "check": "stored config of every run equals its planned config",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "all validation losses finite",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "no run diverged (non-finite) anywhere",
+   "passed": true,
+   "detail": ""
+  }
+ ]
+}

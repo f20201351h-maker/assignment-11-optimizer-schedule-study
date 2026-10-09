@@ -1,0 +1,30 @@
+{
+ "jobs_ok": 110,
+ "jobs_failed": 0,
+ "gpu_reported": {
+  "NVIDIA A10": 41,
+  "NVIDIA A10G": 69
+ },
+ "jobs_by_plan": {
+  "bench": 2,
+  "schedules": 45,
+  "sweep": 27,
+  "final_stop200": 2,
+  "warmup_controls": 12,
+  "sweep_seeds": 22
+ },
+ "in_container_gpu_seconds": 2825.7,
+ "in_container_gpu_hours": 0.785,
+ "ledger_cost_usd_at_1.10_per_hour": 0.865,
+ "max_concurrent_containers_configured": 4,
+ "billing_report": {
+  "app_runs": 13,
+  "cost_by_resource_usd": {
+   "A10G": 1.0032,
+   "Memory": 0.0069,
+   "CPU": 0.0408
+  },
+  "total_usd": 1.0509,
+  "source": "modal billing report --show-resources --json"
+ }
+}

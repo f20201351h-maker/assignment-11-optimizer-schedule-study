@@ -1,0 +1,53 @@
+[
+ {
+  "run_id": "final__w384__cosine300__lr0.00238__wu30__bc1__s1337",
+  "segment": "main",
+  "step": 200,
+  "path": "/vol/final__w384__cosine300__lr0.00238__wu30__bc1__s1337/main_step200.pt",
+  "logged_val": 1.91657,
+  "weights_sha_logged": "dacb44d4797c7e1f",
+  "reloaded_val": 1.9165722726405352,
+  "stored_step": 200,
+  "optimizer_steps": [
+   200
+  ],
+  "weights_sha_reloaded": "dacb44d4797c7e1f",
+  "gpu": "NVIDIA A10G",
+  "abs_val_diff": 2.2726405350947942e-06,
+  "sha_match": true
+ },
+ {
+  "run_id": "final__w384__wsd300__lr0.002__wu30__bc1__s1337",
+  "segment": "main",
+  "step": 200,
+  "path": "/vol/final__w384__wsd300__lr0.002__wu30__bc1__s1337/main_step200.pt",
+  "logged_val": 1.93092,
+  "weights_sha_logged": "68a67c87444a3d3c",
+  "reloaded_val": 1.9309191824375898,
+  "stored_step": 200,
+  "optimizer_steps": [
+   200
+  ],
+  "weights_sha_reloaded": "68a67c87444a3d3c",
+  "gpu": "NVIDIA A10G",
+  "abs_val_diff": 8.175624102157997e-07,
+  "sha_match": true
+ },
+ {
+  "run_id": "final__w384__wsd300__lr0.002__wu30__bc1__s1337",
+  "segment": "wsd_finish_from200",
+  "step": 222,
+  "path": "/vol/final__w384__wsd300__lr0.002__wu30__bc1__s1337/wsd_finish_from200_step222.pt",
+  "logged_val": 1.84519,
+  "weights_sha_logged": "698511ac5b0d4120",
+  "reloaded_val": 1.8451920958771102,
+  "stored_step": 222,
+  "optimizer_steps": [
+   222
+  ],
+  "weights_sha_reloaded": "698511ac5b0d4120",
+  "gpu": "NVIDIA A10G",
+  "abs_val_diff": 2.0958771100865192e-06,
+  "sha_match": true
+ }
+]
