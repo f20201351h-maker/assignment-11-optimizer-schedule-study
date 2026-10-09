@@ -1,6 +1,6 @@
 # Optimizers and learning-rate schedules, measured on a small GPT
 
-Built as ERA V5 Session 11 assignment. Comparisons with "the notes" below refer to this session's course notes of our cohort, which gave me the worked examples and rules of thumb I tested.
+Built as ERA V5 Session 11 assignment. Comparisons with "the notes" below refer to this session's course notes of our cohort, which gave me the worked examples and rules of thumb I tested. This was for better references
 
 Everything below was run on the same small GPT I used in my training-loop audit (`training-loop-audit`; nanoGPT, character-level Tiny Shakespeare, 6 layers, 384 wide, 10.7M parameters), plus three width variants of it for the learning-rate sweep. Experiments 1 and 2 are pure arithmetic on one weight and run on a CPU. Experiments 3 to 5 are 108 short training runs on Modal GPUs, plus 2 timing runs (about 0.8 GPU-hours, $1.05 in total).
 
